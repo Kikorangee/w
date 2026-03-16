@@ -26,11 +26,14 @@ h1 { margin:0; font-size:32px; line-height:1.1; }
 .section-head { display:flex; align-items:end; justify-content:space-between; gap:12px; margin-bottom:12px; }
 .section-head h2 { margin:0; font-size:22px; }
 .section-head p { margin:0; color:var(--muted); }
-.grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(240px,1fr)); gap:18px; }
+.grid { display:grid; grid-template-columns:repeat(6,1fr); gap:18px; }
+@media (max-width:1400px) { .grid { grid-template-columns:repeat(5,1fr); } }
+@media (max-width:1100px) { .grid { grid-template-columns:repeat(4,1fr); } }
+@media (max-width:800px) { .grid { grid-template-columns:repeat(3,1fr); } }
+@media (max-width:500px) { .grid { grid-template-columns:repeat(2,1fr); } }
 .card { background:linear-gradient(180deg, rgba(18,31,55,0.98), rgba(10,19,33,0.98)); border:1px solid var(--line); border-radius:14px; overflow:hidden; box-shadow:0 10px 25px rgba(0,0,0,0.25); }
 .card.is-playable { cursor:pointer; }
 .card.is-playable:hover { outline:2px solid rgba(56,189,248,0.35); }
-
 .poster { position:relative; width:100%; aspect-ratio:16/9; background-size: cover; background-position: center; }
 
 /* Hide all text overlays */
@@ -85,7 +88,7 @@ h1 { margin:0; font-size:32px; line-height:1.1; }
 <body>
   <aside class="sidebar">
     <h2>Training Hub</h2>
-    <p>Complete Vimeo video library</p>
+    <p>Categories</p>
     <div class="links">
       <h3 class="sidebar-subhead">Helpful links</h3>
       <a href="#">Documentation</a>
@@ -97,7 +100,7 @@ h1 { margin:0; font-size:32px; line-height:1.1; }
 
   <main class="main">
     <div class="header">
-      <h1>Training Library</h1>
+      <h1>Webfleet Training Library</h1>
     </div>
     <p class="intro">Click any card to play video</p>
 
@@ -216,6 +219,18 @@ h1 { margin:0; font-size:32px; line-height:1.1; }
             <p class="actions"><span class="action">Play video</span></p>
           </div>
         </article>
+        <!-- PDF: Link 740 Advanced Vehicle Device -->
+<article class="card is-pdf" data-type="pdf" data-title="Link 740 Advanced Vehicle Device" data-category="Product Documentation">
+  <div class="poster" style="background-image: url('thumbnails/740.jpg'); background-color: #1e3a5f;">
+    <span class="pdf-badge">PDF</span>
+    <img class="poster-logo" src="directtrack-logo.gif" alt="" aria-hidden="true">
+  </div>
+  <div class="card-body">
+    <p class="actions">
+      <a class="action" href="Webfleet-Training-Academy\Product Kits\wf-link740-productkit.int.pdf" target="_blank" rel="noopener">Open PDF</a>
+    </p>
+  </div>
+</article>
         <!-- Video 13: 1173730642 -->
         <article class="card is-playable" data-vimeo-id="1173730642" data-title="Workflow Management - Basic Orders">
           <div class="poster" style="background-image: url('thumbnails/1173730642.jpg');">
